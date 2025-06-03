@@ -111,27 +111,27 @@
     <input type="hidden" name="_captcha" value="false">
 
     <label for="name">Name:</label>
-    <input type="text" id="name" name="Name" required />
+    <input type="text" id="name" name="Name" required autocomplete="name" />
 
     <label for="email">Email:</label>
-    <input type="email" id="email" name="Email" required />
+    <input type="email" id="email" name="Email" required autocomplete="email" />
 
     <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="Phone" required />
+    <input type="tel" id="phone" name="Phone" required autocomplete="tel" pattern="[0-9+\-\s]{7,15}" />
 
     <label>Services Required:</label>
     <div class="checkbox-grid">
-      <label><input type="checkbox" name="Services" value="Standard Clean" /> Standard Clean</label>
-      <label><input type="checkbox" name="Services" value="Deep Clean" /> Deep Clean</label>
-      <label><input type="checkbox" name="Services" value="End of Tenancy" /> End of Tenancy</label>
-      <label><input type="checkbox" name="Services" value="Oven Cleaning" /> Oven Cleaning</label>
-      <label><input type="checkbox" name="Services" value="Fridge Cleaning" /> Fridge Cleaning</label>
-      <label><input type="checkbox" name="Services" value="Carpet Cleaning (Small)" /> Carpet Cleaning (Small)</label>
-      <label><input type="checkbox" name="Services" value="Carpet Cleaning (Medium)" /> Carpet Cleaning (Medium)</label>
-      <label><input type="checkbox" name="Services" value="Carpet Cleaning (Large)" /> Carpet Cleaning (Large)</label>
-      <label><input type="checkbox" name="Services" value="Landing/Hallway" /> Landing / Hallway</label>
-      <label><input type="checkbox" name="Services" value="Stairs" /> Stairs</label>
-      <label><input type="checkbox" name="Services" value="Office Cleaning" /> Office Cleaning</label>
+      <label><input type="checkbox" name="Services[]" value="Standard Clean" /> Standard Clean</label>
+      <label><input type="checkbox" name="Services[]" value="Deep Clean" /> Deep Clean</label>
+      <label><input type="checkbox" name="Services[]" value="End of Tenancy" /> End of Tenancy</label>
+      <label><input type="checkbox" name="Services[]" value="Oven Cleaning" /> Oven Cleaning</label>
+      <label><input type="checkbox" name="Services[]" value="Fridge Cleaning" /> Fridge Cleaning</label>
+      <label><input type="checkbox" name="Services[]" value="Carpet Cleaning (Small)" /> Carpet Cleaning (Small)</label>
+      <label><input type="checkbox" name="Services[]" value="Carpet Cleaning (Medium)" /> Carpet Cleaning (Medium)</label>
+      <label><input type="checkbox" name="Services[]" value="Carpet Cleaning (Large)" /> Carpet Cleaning (Large)</label>
+      <label><input type="checkbox" name="Services[]" value="Landing/Hallway" /> Landing / Hallway</label>
+      <label><input type="checkbox" name="Services[]" value="Stairs" /> Stairs</label>
+      <label><input type="checkbox" name="Services[]" value="Office Cleaning" /> Office Cleaning</label>
     </div>
 
     <label for="message">Additional Notes:</label>
