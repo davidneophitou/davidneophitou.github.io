@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Cleaning Service</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      color: #D97488;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 2px solid white;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    button {
+      margin-top: 2rem;
+      background-color: #D97488;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b85c72;
+    }
+  </style>
+</head>
+<body>
+  <h1>Book a Cleaning Service</h1>
+  <form action="mailto:enquiries@cleaningiscaring.co.uk" method="post" enctype="text/plain">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="service">Select a Service:</label>
+    <select id="service" name="service" required>
+      <option value="">-- Choose a service --</option>
+      <option>Standard Clean – £13.50/hr</option>
+      <option>Deep Clean – £15/hr</option>
+      <option>End of Tenancy – from £15/hr</option>
+      <option>Commercial / Office Cleaning – £24/hr per cleaner</option>
+      <option>Add-On Services (Oven, Fridge, Carpet, etc.)</option>
+    </select>
+
+    <label for="message">Additional Details:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Send Booking</button>
+  </form>
+</body>
+</html>
