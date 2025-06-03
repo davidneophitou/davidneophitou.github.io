@@ -97,18 +97,6 @@
     input[type="submit"]:hover {
       background-color: #c05a70;
     }
-
-    a.back-link {
-      display: block;
-      text-align: center;
-      color: #D97488;
-      margin-top: 2rem;
-      text-decoration: none;
-    }
-
-    a.back-link:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
@@ -116,7 +104,12 @@
 
   <h2>Book a Cleaning</h2>
 
-  <form action="mailto:enquiries@cleaningiscaring.co.uk" method="POST" enctype="text/plain">
+  <form action="https://formsubmit.co/enquiries@cleaningiscaring.co.uk" method="POST">
+    <!-- Redirect to a thank you page -->
+    <input type="hidden" name="_next" value="https://cleaningiscaring.co.uk/thankyou.html">
+    <input type="hidden" name="_subject" value="New Cleaning Booking Request">
+    <input type="hidden" name="_captcha" value="false">
+
     <label for="name">Name:</label>
     <input type="text" id="name" name="Name" required />
 
