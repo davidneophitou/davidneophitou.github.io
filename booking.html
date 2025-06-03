@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book a Cleaning Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Cleaning – Cleaning is Caring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #000;
@@ -14,39 +14,58 @@
       padding: 2rem;
     }
 
-    h1 {
-      text-align: center;
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
       color: #D97488;
+      text-align: center;
+      margin-bottom: 2rem;
     }
 
     form {
-      max-width: 600px;
-      margin: 2rem auto;
       background-color: #111;
       padding: 2rem;
       border-radius: 1rem;
       border: 2px solid white;
+      max-width: 700px;
+      margin: auto;
     }
 
     label {
       display: block;
-      margin-top: 1rem;
+      margin-bottom: 0.5rem;
       font-weight: bold;
+      color: #D97488;
     }
 
-    input, select, textarea {
+    input, textarea {
       width: 100%;
-      padding: 0.5rem;
-      margin-top: 0.5rem;
+      padding: 0.6rem;
+      margin-bottom: 1.2rem;
       border: none;
       border-radius: 0.5rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .services {
+      margin-bottom: 1.2rem;
+    }
+
+    .services label {
+      font-weight: normal;
+      display: block;
+      color: #fff;
     }
 
     button {
-      margin-top: 2rem;
       background-color: #D97488;
-      color: white;
-      padding: 0.8rem 1.5rem;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 0.5rem;
       font-size: 1rem;
@@ -56,34 +75,50 @@
     button:hover {
       background-color: #b85c72;
     }
+
+    a.back-link {
+      display: block;
+      text-align: center;
+      color: #D97488;
+      margin-top: 2rem;
+      text-decoration: none;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>Book a Cleaning Service</h1>
-  <form action="mailto:enquiries@cleaningiscaring.co.uk" method="post" enctype="text/plain">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="name" required />
+  <h2>Book a Cleaning</h2>
 
-    <label for="email">Email Address:</label>
-    <input type="email" id="email" name="email" required />
+  <form action="mailto:enquiries@cleaningiscaring.co.uk" method="POST" enctype="text/plain">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="Name" required>
 
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone" required />
+    <label for="email">Email</label>
+    <input type="email" id="email" name="Email" required>
 
-    <label for="service">Select a Service:</label>
-    <select id="service" name="service" required>
-      <option value="">-- Choose a service --</option>
-      <option>Standard Clean – £13.50/hr</option>
-      <option>Deep Clean – £15/hr</option>
-      <option>End of Tenancy – from £15/hr</option>
-      <option>Commercial / Office Cleaning – £24/hr per cleaner</option>
-      <option>Add-On Services (Oven, Fridge, Carpet, etc.)</option>
-    </select>
+    <label for="phone">Phone</label>
+    <input type="tel" id="phone" name="Phone" required>
 
-    <label for="message">Additional Details:</label>
-    <textarea id="message" name="message" rows="4"></textarea>
+    <div class="services">
+      <label>Which services would you like?</label>
+      <label><input type="checkbox" name="Services" value="Standard Clean"> Standard Clean</label>
+      <label><input type="checkbox" name="Services" value="Deep Clean"> Deep Clean</label>
+      <label><input type="checkbox" name="Services" value="End of Tenancy Cleaning"> End of Tenancy Cleaning</label>
+      <label><input type="checkbox" name="Services" value="Oven Cleaning"> Oven Cleaning</label>
+      <label><input type="checkbox" name="Services" value="Fridge Cleaning"> Fridge Cleaning</label>
+      <label><input type="checkbox" name="Services" value="Carpet Cleaning"> Carpet Cleaning</label>
+      <label><input type="checkbox" name="Services" value="Commercial/Office Cleaning"> Commercial/Office Cleaning</label>
+    </div>
 
-    <button type="submit">Send Booking</button>
+    <label for="message">Message or Additional Details</label>
+    <textarea id="message" name="Message" placeholder="Let us know your preferred dates, times, or special requirements."></textarea>
+
+    <button type="submit">Send Booking Request</button>
   </form>
+
+  <a href="index.html" class="back-link">← Back to Price List</a>
 </body>
 </html>
